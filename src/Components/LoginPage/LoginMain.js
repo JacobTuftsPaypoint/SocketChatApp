@@ -8,13 +8,6 @@ import { useAuthState } from "react-firebase-hooks/auth"
 
 
 const firebaseConfig = {
-  // apiKey: "AIzaSyCctb-gcyuZjIy16B7SsYGKhhb99pBgkgY",
-  // authDomain: "movie-webapp-7e024.firebaseapp.com",
-  // projectId: "movie-webapp-7e024",
-  // storageBucket: "movie-webapp-7e024.appspot.com",
-  // messagingSenderId: "45182074221",
-  // appId: "1:45182074221:web:d84c01038b21915a0a6e64",
-  // measurementId: "G-XQK5SGJ01P"
   apiKey: process.env.REACT_APP_API_KEY,
   authDomain: process.env.REACT_APP_AUTH_DOMAIN,
   projectId: "movie-webapp-7e024",
