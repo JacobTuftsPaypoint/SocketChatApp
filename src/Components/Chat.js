@@ -8,6 +8,7 @@ import "../Styles/Global.css"
 
 import { getFirestore, collection, orderBy,query,limit} from 'firebase/firestore';
 import { useCollection } from 'react-firebase-hooks/firestore';
+import OuterBackButton from "./OuterBackButton"
 
 const Chat = () =>{
     const [Page,SetPage] = useState("Home")
@@ -17,7 +18,7 @@ const Chat = () =>{
     return(
         <div id="myroot">
             <header id="ChatHeader">
-                {Page!=="Home"?<BackButton SetPage={SetPage}/>:<p></p>}
+                {Page!=="Home"?<BackButton SetPage={SetPage}/>:<OuterBackButton/>}
                 <h1>{Page}</h1>
                 <User/>
             </header>
