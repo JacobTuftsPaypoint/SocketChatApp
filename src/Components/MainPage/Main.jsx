@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-// import {  NavLink } from "react-router-dom";
+import {  NavLink } from "react-router-dom";
 // import { app } from "../LoginPage/LoginMain"
 import { LoginButton } from "./loginButton";
 // import { getAuth, onAuthStateChanged } from "firebase/auth";
@@ -67,6 +67,9 @@ const Main = () => {
                 </li>
               );
             })}
+            <li>
+            <NavLink to='/chat'>Chat Room</NavLink> 
+            </li>
           </ul>
         </nav>
         <form>
