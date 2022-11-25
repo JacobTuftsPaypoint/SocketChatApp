@@ -4,6 +4,7 @@ import { createUserWithEmailAndPassword, setPersistence, browserSessionPersisten
 import { getFirestore, collection, getDoc, doc, setDoc} from 'firebase/firestore/lite'
 import { useNavigate} from "react-router-dom"
 
+import '../../style.css'
 
 export default function CreateAccMain() {
 

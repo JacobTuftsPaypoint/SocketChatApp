@@ -6,6 +6,7 @@ import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, on
 import React, {useState} from 'react'
 import { useAuthState } from "react-firebase-hooks/auth"
 
+import '../../style.css'
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_API_KEY,

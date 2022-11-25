@@ -15,7 +15,7 @@ const Chat = () =>{
     const [Value,Loading,Error] = useCollection(query(collection(getFirestore(),"/Messages"),orderBy("Time", "desc"),limit(100)))
 
     return(
-        <>
+        <div id="myroot">
             <header id="ChatHeader">
                 {Page!=="Home"?<BackButton SetPage={SetPage}/>:<p></p>}
                 <h1>{Page}</h1>
@@ -24,7 +24,7 @@ const Chat = () =>{
             
             {Page === "Home" ? <ChatHome SetPage={SetPage}/> : <ChatRoom Room={Page} Value={Value} Loading={Loading} Error={Error}/>}
             
-        </>
+        </div>
     )
     
 }

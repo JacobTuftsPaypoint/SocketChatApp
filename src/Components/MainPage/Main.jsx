@@ -5,7 +5,7 @@ import { LoginButton } from "./loginButton";
 // import { getAuth, onAuthStateChanged } from "firebase/auth";
 import Card from "./Card";
 
-
+import '../../style.css'
 
 let API_key = "&api_key=db95773a7fb212ba790d71f6adac0e7e";
 let base_url = "https://api.themoviedb.org/3";
