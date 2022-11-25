@@ -1,16 +1,24 @@
 import React, { useState, useEffect } from "react";
-import {  NavLink } from "react-router-dom";
-
-
+// import {  NavLink } from "react-router-dom";
+// import { app } from "../LoginPage/LoginMain"
+import { LoginButton } from "./loginButton";
+// import { getAuth, onAuthStateChanged } from "firebase/auth";
 import Card from "./Card";
+
+
+
 let API_key = "&api_key=db95773a7fb212ba790d71f6adac0e7e";
 let base_url = "https://api.themoviedb.org/3";
 let url = base_url + "/discover/movie?sort_by=popularity.desc" + API_key;
 let arr = ["Popular"];
+
+
+
 const Main = () => {
   const [movieData, setData] = useState([]);
   const [url_set, setUrl] = useState(url);
   const [search, setSearch] = useState();
+
   useEffect(() => {
     fetch(url_set)
       .then((res) => res.json())
@@ -35,6 +43,9 @@ const Main = () => {
       setSearch(" ");
     }
   };
+  
+
+
   return (
     <>
       <div className="header">
@@ -71,7 +82,7 @@ const Main = () => {
               onKeyPress={searchMovie}
             ></input>
             <div>
-              <button className="log-in-btn"> <NavLink to='/login'>Log in</NavLink> </button>
+              <LoginButton />
             </div>
           </div>
         </form>
@@ -88,4 +99,5 @@ const Main = () => {
     </>
   );
 };
+
 export default Main;
