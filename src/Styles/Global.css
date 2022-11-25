@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+:root{
+    --MainColour:#6B728E;
+    --SecondaryColour:#1A1A2E;
+    --Font:'Poppins', sans-serif;
+}
+
+body{
+    font-family: var(--Font);
+    background-color: var(--MainColour);
+    padding: 0;
+    margin: 0;
+    
+}
+
+#root{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 6fr 1fr;
+    height: 100vh;
+}
+
+#ChatHeader{
+    background-color: var(--SecondaryColour);
+    grid-row-start: 1;
+    grid-row-end: 2;
+    grid-column-start: 1;
+    grid-column-end: -1;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    text-align: center;
+    color: #ffffff;
+}
+
+#RoomList{
+    grid-row-start: 2;
+    grid-row-end: -1;
+    grid-column-start: 1;
+    grid-column-end: -1;
+    display: flex;
+    flex-flow: column;
+    max-width: 100%;
+    height: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+#RoomList button{
+    width: 50%;
+    padding: 2rem;
+    border-color: #ffffff;
+    border-style: solid;
+    border-radius: 1rem;
+    background-color: var(--SecondaryColour);
+    color: #ffffff;
+    font-size: 2rem;
+    transition: 500ms;
+    cursor: pointer;
+}
+
+#RoomList button:hover{
+    width: 75%;
+}
+#MessageHolder{
+    grid-row-start: 2;
+    grid-row-end: -2;
+    grid-column-start: 1;
+    grid-column-end: -1;
+    overflow-y: scroll;
+    display: flex;
+    flex-flow: column;
+}
+
+#MessageForm{
+    grid-row-start: -2;
+    grid-row-end: -1;
+    grid-column-start: 1;
+    grid-column-end: -1;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    column-gap: 1rem;
+    margin:0.5rem
+}
+#MessageForm input[type="text"]{
+    flex-grow: 1;
+    border-color: #ffffff;
+    border-style: solid;
+    border-radius: 1rem;
+    background-color: var(--SecondaryColour);
+    color: #ffffff;   
+    font-size: large; 
+}
+
+#MessageForm input[type="submit"]{
+    border-color: #ffffff;
+    border-style: solid;
+    border-radius: 1rem;
+    background-color: var(--SecondaryColour);
+    color: #ffffff;
+    min-width: 10%;
+    cursor: pointer;
+}
+
+.Message{
+    background-color: white;
+    width: fit-content;
+    min-width: 20%;
+    padding: 0.1rem;
+    margin: 0.5rem;
+    border-radius: 1rem;
+}
+
+#BackButton{
+    background-color: var(--MainColour);
+    border-radius: 1rem;
+    border-style: solid;
+    border-color: #ffffff;
+    margin: 0.5rem;
+    font-weight: bold;
+    color: #ffffff;
+    cursor: pointer;
+}
